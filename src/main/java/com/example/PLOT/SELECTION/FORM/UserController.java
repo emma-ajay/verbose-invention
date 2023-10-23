@@ -95,6 +95,7 @@ public class UserController {
         return "User Registered Successfully";
        
     }
+  
     @GetMapping("/takenPlots/c")
     public List<Integer> getAllTakenPlotsC(){
         List<User> users = userRepository.getAllUsers();
