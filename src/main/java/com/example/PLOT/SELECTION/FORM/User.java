@@ -34,4 +34,8 @@ import lombok.Setter;
         private String typeSelection;
 
         private int typeCPlots;
+
+        private int typeBPlots;
+
+        private int typeAPlots;
 }
