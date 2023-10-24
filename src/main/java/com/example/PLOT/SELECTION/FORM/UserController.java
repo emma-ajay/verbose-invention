@@ -53,8 +53,8 @@ public class UserController {
 
     @PostMapping("/register/typeB/{typeBPlot}")
     public String registerUserTypeB(@RequestBody SelectionForm form, @PathVariable int typeBPlot ) throws IOException{
-        if(typeBPlot > 166 || typeBPlot < 119){
-            throw new IllegalStateException("Plot number is greater than 166");
+        if(typeBPlot > 118 || typeBPlot < 67){
+            throw new IllegalStateException("Plot number is greater than 118");
         }
         List<User> users = userRepository.getAllUsers();
         for(User user: users){
