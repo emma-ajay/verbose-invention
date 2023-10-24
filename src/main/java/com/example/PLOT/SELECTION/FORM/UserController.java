@@ -102,7 +102,7 @@ public class UserController {
         List<User> users = userRepository.getAllUsers();
         List<Integer> takenPlots = new ArrayList<>();
         for(User user: users){
-            if(user.getTypeCPlots() != 0 || Objects.nonNull(user.getTypeCPlots()))
+            if(user.getTypeCPlots() != 0)
             {
             takenPlots.add(user.getTypeCPlots());
         }
@@ -114,8 +114,9 @@ public class UserController {
     public List<Integer> getAllTakenPlotsB(){
         List<User> users = userRepository.getAllUsers();
         List<Integer> takenPlots = new ArrayList<>();
+       
         for(User user: users){
-            if(user.getTypeBPlots() != 0 || Objects.nonNull(user.getTypeBPlots()))
+            if(user.getTypeBPlots() != 0 )
             {
             takenPlots.add(user.getTypeBPlots());
         }
@@ -129,7 +130,7 @@ public class UserController {
         List<User> users = userRepository.getAllUsers();
         List<Integer> takenPlots = new ArrayList<>();
         for(User user: users){
-            if(user.getTypeAPlots() != 0 || Objects.nonNull(user.getTypeAPlots()))
+            if(user.getTypeAPlots() != 0 )
             {
             takenPlots.add(user.getTypeAPlots());
         }
