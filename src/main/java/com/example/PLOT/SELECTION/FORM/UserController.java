@@ -149,7 +149,7 @@ public class UserController {
         message = message.replace("[[type]]",user.getTypeSelection());
         message = message.replace("[[plot number]]",String.valueOf(plot));
         email.setMailContent(message);
-        email.setMailTo("emmanuelajayi205@gmail.com");
+        email.setMailTo(user.getEmail());
         emailService.sendEmail(email);
         //email.setMailFrom("test");
     
