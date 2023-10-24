@@ -9,6 +9,7 @@ import java.util.Objects;
 import com.google.common.io.Files;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,7 +29,7 @@ public class UserController {
 
 
     @PostMapping("/register/typeA/{typeAPlot}")
-    public String registerUserTypeA(@RequestBody SelectionForm form, @RequestParam int typeAPlot ) throws IOException{
+    public String registerUserTypeA(@RequestBody SelectionForm form, @PathVariable int typeAPlot ) throws IOException{
         if(typeAPlot > 166 || typeAPlot < 119){
             throw new IllegalStateException("Plot number is greater than 166");
         }
@@ -51,7 +52,7 @@ public class UserController {
     }
 
     @PostMapping("/register/typeB/{typeBPlot}")
-    public String registerUserTypeB(@RequestBody SelectionForm form, @RequestParam int typeBPlot ) throws IOException{
+    public String registerUserTypeB(@RequestBody SelectionForm form, @PathVariable int typeBPlot ) throws IOException{
         if(typeBPlot > 166 || typeBPlot < 119){
             throw new IllegalStateException("Plot number is greater than 166");
         }
@@ -74,7 +75,7 @@ public class UserController {
     }
 
     @PostMapping("/register/typeC/{typeCPlot}")
-     public String registerTypeCUser(@RequestBody SelectionForm form, @RequestParam int typeCPlot) throws IOException{
+     public String registerTypeCUser(@RequestBody SelectionForm form, @PathVariable int typeCPlot) throws IOException{
         if(typeCPlot > 66 || typeCPlot < 1){
             throw new IllegalStateException("Plot number is greater than 66");
         }
