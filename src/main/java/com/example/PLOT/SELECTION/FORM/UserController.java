@@ -146,7 +146,7 @@ public class UserController {
         message = message.replace("[[number]]",user.getPhone_no());
         message = message.replace("[[email]]",user.getEmail());
         message = message.replace("[[type]]",user.getTypeSelection());
-        message = message.replace("[[plot]]",String.valueOf(plot));
+        message = message.replace("[[plot number]]",String.valueOf(plot));
         email.setMailContent(message);
         email.setMailTo("emmanuelajayi205@gmail.com");
         emailService.sendEmail(email);
