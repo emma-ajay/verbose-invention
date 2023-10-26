@@ -18,5 +18,7 @@ public class SelectionForm {
 
     private String typeSelection;
 
+    private String timestamp;
+
     
 }

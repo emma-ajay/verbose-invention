@@ -45,6 +45,7 @@ public class UserController {
         user.setPhone_no(form.getPhone_no());
         user.setTypeSelection(form.getTypeSelection());
         user.setTypeAPlots(typeAPlot);
+        user.setTimestamp(form.getTimestamp());
         userRepository.save(user);
         sendEmail(user, typeAPlot);
         return "User Registered Successfully";
@@ -68,6 +69,7 @@ public class UserController {
         user.setPhone_no(form.getPhone_no());
         user.setTypeSelection(form.getTypeSelection());
         user.setTypeBPlots(typeBPlot);
+        user.setTimestamp(form.getTimestamp());
         userRepository.save(user);
         sendEmail(user, typeBPlot);
         return "User Registered Successfully";
@@ -91,6 +93,7 @@ public class UserController {
         user.setPhone_no(form.getPhone_no());
         user.setTypeSelection(form.getTypeSelection());
         user.setTypeCPlots(typeCPlot);
+        user.setTimestamp(form.getTimestamp());
         userRepository.save(user);
         sendEmail(user, typeCPlot);
         return "User Registered Successfully";

@@ -38,4 +38,6 @@ import lombok.Setter;
         private int typeBPlots;
 
         private int typeAPlots;
+
+        private String timestamp;
 }
